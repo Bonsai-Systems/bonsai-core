@@ -2,8 +2,16 @@
 /*
 Plugin Name: Bonsai Digital Core Customisations
 Description: Custom admin color scheme, Support link, and theme setup functions.
-Version: 1.6
-Author: Ben Ervine / The Bonsai Digital Collective
+Version: 1.8
+Author: The Bonsai Digital Collective
+Author URI: https://bonsaidigitalcollective.co.uk/
+Text Domain: bonsai
+
+-------------------------------------------------------------
+Update 2025-09-01: Refactored for code quality. 
+- Updated to 'The Bonsai Digital Collective Help Centre'
+- Updates spellings on centre
+-------------------------------------------------------------
 */
 
 
@@ -46,7 +54,7 @@ add_action('wp_dashboard_setup', 'bonsai_add_support_widget', 10);
 function bonsai_add_support_widget() {
   wp_add_dashboard_widget(
     'bonsai_support_widget',
-    __('The Bonsai Digital Collective Maintenance Support', 'textdomain'),
+    __('The Bonsai Digital Collective Help Centre', 'textdomain'),
     'bonsai_render_support_widget'
   );
 }

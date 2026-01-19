@@ -60,5 +60,5 @@ Yes. Edit the `$banner`, `$hc`, and `$req` variables directly in the plugin, or 
 
 == Upgrade Notice ==
 
-= 1.6 =  
+= 1.8 =  
 New release includes branded admin colour scheme, support menu, and widget. Recommended update.  

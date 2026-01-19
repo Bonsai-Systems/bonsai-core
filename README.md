@@ -3,7 +3,6 @@
 A lightweight WordPress plugin that applies branded admin customisations and adds quick support access for clients.  
 
 ![WordPress](https://img.shields.io/badge/WordPress-%5E6.0-blue)  
-![License: GPL v2](https://img.shields.io/badge/License-GPLv2-blue.svg)  
 
 ---
 
