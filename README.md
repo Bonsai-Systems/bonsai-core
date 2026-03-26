@@ -50,12 +50,7 @@ A: Yes — edit the `$banner`, `$hc`, and `$req` variables inside the plugin, or
 
 ## Changelog
 
-### 1.6 (2025-10-01)  
-- Added custom admin colour scheme using Bonsai brand colours  
-- Forced all users onto Bonsai colour scheme for consistency  
-- Added admin bar support link (opens in a new tab)  
-- Added support widget with banner, Help Centre, and support request links  
-- Improved escaping and admin-only context  
+See [CHANGELOG.md](CHANGELOG.md) for the full release history.
 
 ---
 
