@@ -15,6 +15,18 @@ Update 2025-09-01: Refactored for code quality.
 */
 
 
+// Plugin Update Checker — checks GitHub releases for new versions
+require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$bonsai_update_checker = PucFactory::buildUpdateChecker(
+	'https://github.com/The-Bonsai-Digital-Collective/bonsai-core/',
+	__FILE__,
+	'bonsai-core'
+);
+$bonsai_update_checker->getVcsApi()->enableReleaseAssets();
+
 // Register custom admin color scheme
 function bonsai_custom_admin_color_scheme() {
 	$css_file = plugin_dir_url( __FILE__ ) . 'colour-scheme.css';
