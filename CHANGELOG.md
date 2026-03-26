@@ -24,6 +24,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.9] - 2026-03-26
+
+### Added
+- [bonsai-core.php] Plugin Update Checker (v5.6) via Composer — WordPress sites now receive native update notifications via GitHub Releases
+- [composer.json] Composer dependency management introduced
+- [.gitignore] Added to exclude OS junk files
+
+### Fixed
+- [bonsai-core.php] Corrected text domain from `'textdomain'` to `'bonsai'` across all translation calls
+- [bonsai-core.php] Renamed `add_custom_toolbar_menu()` to `bonsai_add_custom_toolbar_menu()` for namespace safety
+- [bonsai-core.php] Added missing text domain to `wp_admin_css_color()` call
+- [bonsai-core.php] Added `rel="noopener"` to admin bar external link
+- [bonsai-core.php] Applied WordPress Coding Standards formatting throughout
+- [colour-scheme.css] Fixed double-hash syntax error on `.wp-ui-text-highlight` colour value
+
+---
+
 ## [1.8] - 2026-03-26
 
 ### Fixed
