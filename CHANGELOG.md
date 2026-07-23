@@ -11,16 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Changed
--
+- [bonsai-core.php] GitHub PAT for the Plugin Update Checker now read from a `BONSAI_PUC_GITHUB_TOKEN` constant instead of being hardcoded in the file
 
 ### Fixed
--
+- [bonsai-core.php] Added missing `defined('ABSPATH') || exit;` guard to prevent direct file access
 
 ### Removed
 -
 
 ### Security
--
+- [bonsai-core.php] Removed hardcoded GitHub fine-grained PAT from source; requires defining `BONSAI_PUC_GITHUB_TOKEN` in `wp-config.php` on each site going forward
 
 ---
 

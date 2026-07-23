@@ -14,6 +14,7 @@ Update 2025-09-01: Refactored for code quality.
 -------------------------------------------------------------
 */
 
+defined( 'ABSPATH' ) || exit;
 
 // Plugin Update Checker — checks GitHub releases for new versions
 require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
@@ -27,7 +28,10 @@ $bonsai_update_checker = PucFactory::buildUpdateChecker(
 );
 
 // Private repo — fine-grained token with Contents: read-only scope.
-$bonsai_update_checker->setAuthentication( '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' );
+// Define BONSAI_PUC_GITHUB_TOKEN in wp-config.php (never commit the token itself).
+if ( defined( 'BONSAI_PUC_GITHUB_TOKEN' ) && BONSAI_PUC_GITHUB_TOKEN ) {
+	$bonsai_update_checker->setAuthentication( BONSAI_PUC_GITHUB_TOKEN );
+}
 
 $bonsai_update_checker->getVcsApi()->enableReleaseAssets();
 
