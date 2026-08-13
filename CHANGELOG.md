@@ -11,10 +11,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Changed
+-
+
+### Fixed
+-
+
+### Removed
+-
+
+### Security
+-
+
+---
+
+## [1.10] - 2026-08-13
+
+### Added
+- [bonsai-core.php] Plugin Update Checker now matches the `bonsai-code-injector` reference setup: explicit 6-hour `$checkPeriod` (was the library default of 12h) and `setBranch( 'main' )` for an unambiguous update source
+
+### Changed
 - [bonsai-core.php] GitHub PAT for the Plugin Update Checker now read from a `BONSAI_PUC_GITHUB_TOKEN` constant instead of being hardcoded in the file
+- [bonsai-core.php] Update checker repository URL corrected to `github.com/Bonsai-Systems/bonsai-core` (was pointing at the old `The-Bonsai-Digital-Collective` org, which would have made update checks fail silently)
 
 ### Fixed
 - [bonsai-core.php] Added missing `defined('ABSPATH') || exit;` guard to prevent direct file access
+- [composer.json] `composer.json` was byte-identical to several other Bonsai plugins' (all requiring `yahnis-elsts/plugin-update-checker`), which risked Composer generating the same `ComposerAutoloaderInit{hash}` autoloader class across plugins — a fatal "class already in use" error if two such plugins were ever active together on the same site (confirmed happening between `cookie-consent-video-embed-CookieScript` and `bonsai-code-injector`/`bonsai-maintenance`/`bonsai-pop-up` on a live client site). Added a unique `name` field to `composer.json` and regenerated `vendor/` from a clean install; also picked up `yahnis-elsts/plugin-update-checker` v5.6 → v5.7 in the process.
 
 ### Removed
 -

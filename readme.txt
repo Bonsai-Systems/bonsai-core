@@ -1,10 +1,10 @@
 === Bonsai Digital Core Customisations ===
 Contributors: bonsaidigital, benervine  
 Tags: admin, colour scheme, dashboard widget, support, branding  
-Requires at least: 5.0  
-Tested up to: 6.6  
-Requires PHP: 7.4  
-Stable tag: 1.6  
+Requires at least: 5.0
+Tested up to: 6.6
+Requires PHP: 7.4
+Stable tag: 1.10
 License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html  
 
@@ -52,7 +52,14 @@ Yes. Edit the `$banner`, `$hc`, and `$req` variables directly in the plugin, or 
 
 == Changelog ==
 
-= 1.6 (2025-10-01) =  
+= 1.10 (2026-08-13) =
+* Plugin Update Checker now reads its GitHub token from `BONSAI_PUC_GITHUB_TOKEN` in wp-config.php instead of a hardcoded value in the plugin file
+* Fixed update checker repository URL (was pointing at the old Bonsai org, now `Bonsai-Systems`)
+* Fixed a fatal "class already in use" error that could occur when this plugin was active alongside other Bonsai plugins bundling the same Composer dependency
+* Added `defined('ABSPATH') || exit;` guard against direct file access
+* Update checker now checks every 6 hours and targets the `main` branch explicitly, matching the rest of the Bonsai plugin suite
+
+= 1.6 (2025-10-01) =
 * Added Bonsai custom admin colour scheme and forced it for all users  
 * Added admin bar support link (opens in new tab)  
 * Added branded support widget with Help Centre and support request links  

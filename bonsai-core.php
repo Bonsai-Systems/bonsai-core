@@ -2,7 +2,7 @@
 /*
 Plugin Name: Bonsai Digital Core Customisations
 Description: Custom admin color scheme, Support link, and theme setup functions.
-Version: 1.9
+Version: 1.10
 Author: The Bonsai Digital Collective
 Author URI: https://bonsaidigitalcollective.co.uk/
 Text Domain: bonsai
@@ -22,10 +22,13 @@ require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $bonsai_update_checker = PucFactory::buildUpdateChecker(
-	'https://github.com/The-Bonsai-Digital-Collective/bonsai-core/',
+	'https://github.com/Bonsai-Systems/bonsai-core/',
 	__FILE__,
-	'bonsai-core'
+	'bonsai-core',
+	6
 );
+
+$bonsai_update_checker->setBranch( 'main' );
 
 // Private repo — fine-grained token with Contents: read-only scope.
 // Define BONSAI_PUC_GITHUB_TOKEN in wp-config.php (never commit the token itself).

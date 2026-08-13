@@ -1,28 +1,28 @@
 <?php return array(
     'root' => array(
-        'name' => '__root__',
+        'name' => 'bonsai-digital-collective/bonsai-core',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '95a4a39a4062830ad5588eb98e42bfda9e735b36',
+        'reference' => '7c45bf59bc43e285d17ef6eedd3f72c369ea5d29',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'dev' => true,
+        'dev' => false,
     ),
     'versions' => array(
-        '__root__' => array(
+        'bonsai-digital-collective/bonsai-core' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '95a4a39a4062830ad5588eb98e42bfda9e735b36',
+            'reference' => '7c45bf59bc43e285d17ef6eedd3f72c369ea5d29',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'yahnis-elsts/plugin-update-checker' => array(
-            'pretty_version' => 'v5.6',
-            'version' => '5.6.0.0',
-            'reference' => 'a2db6871deec989a74e1f90fafc6d58ae526a879',
+            'pretty_version' => 'v5.7',
+            'version' => '5.7.0.0',
+            'reference' => '275a96a2a18d03c34c87f35cb68673c8c49ac3b1',
             'type' => 'library',
             'install_path' => __DIR__ . '/../yahnis-elsts/plugin-update-checker',
             'aliases' => array(),
