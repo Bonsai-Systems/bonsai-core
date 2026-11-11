@@ -24,7 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.10] - 2026-08-13
+## [1.10] - 2026-11-11
 
 ### Added
 - [bonsai-core.php] Plugin Update Checker now matches the `bonsai-code-injector` reference setup: explicit 6-hour `$checkPeriod` (was the library default of 12h) and `setBranch( 'main' )` for an unambiguous update source
@@ -32,6 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - [bonsai-core.php] GitHub PAT for the Plugin Update Checker now read from a `BONSAI_PUC_GITHUB_TOKEN` constant instead of being hardcoded in the file
 - [bonsai-core.php] Update checker repository URL corrected to `github.com/Bonsai-Systems/bonsai-core` (was pointing at the old `The-Bonsai-Digital-Collective` org, which would have made update checks fail silently)
+- [bonsai-core.php] Admin bar link and dashboard widget now point to `https://support.bonsaidigitalcollective.co.uk/` (was the old Zendesk help centre); labels renamed to "Bonsai Support"
+- [README.md] Help Centre link updated to the new support site
 
 ### Fixed
 - [bonsai-core.php] Added missing `defined('ABSPATH') || exit;` guard to prevent direct file access

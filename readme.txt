@@ -52,7 +52,8 @@ Yes. Edit the `$banner`, `$hc`, and `$req` variables directly in the plugin, or 
 
 == Changelog ==
 
-= 1.10 (2026-08-13) =
+= 1.10 (2026-11-11) =
+* Support links in the admin bar and dashboard widget now point to the new Bonsai Support site (support.bonsaidigitalcollective.co.uk)
 * Plugin Update Checker now reads its GitHub token from `BONSAI_PUC_GITHUB_TOKEN` in wp-config.php instead of a hardcoded value in the plugin file
 * Fixed update checker repository URL (was pointing at the old Bonsai org, now `Bonsai-Systems`)
 * Fixed a fatal "class already in use" error that could occur when this plugin was active alongside other Bonsai plugins bundling the same Composer dependency

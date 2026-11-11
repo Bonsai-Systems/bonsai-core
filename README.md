@@ -20,7 +20,7 @@ This plugin ensures a consistent Bonsai Digital Collective experience across Wor
 
 - **Dashboard Support Widget**  
   - Displays a branded support banner  
-  - Links to the [Help Centre](https://bonsaidigitalcollective.zendesk.com/hc/en-gb)  
+  - Links to [Bonsai Support](https://support.bonsaidigitalcollective.co.uk/)  
   - Provides direct access to submit support requests  
   - Includes friendly messaging for clients and site managers  
 
