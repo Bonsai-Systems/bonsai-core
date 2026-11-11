@@ -60,12 +60,12 @@ add_filter( 'get_user_option_admin_color', 'bonsai_set_default_admin_color', 5 )
 function bonsai_add_custom_toolbar_menu( $wp_admin_bar ) {
 	$args = array(
 		'id'    => 'bonsai-support-menu',
-		'title' => __( 'Contact the support desk', 'bonsai' ),
-		'href'  => 'https://bonsaidigitalcollective.zendesk.com/hc/en-gb/requests/new',
+		'title' => __( 'Contact Bonsai Support', 'bonsai' ),
+		'href'  => 'https://support.bonsaidigitalcollective.co.uk/',
 		'meta'  => array(
 			'target' => '_blank',
 			'rel'    => 'noopener',
-			'title'  => __( 'Open support desk in a new tab', 'bonsai' ),
+			'title'  => __( 'Open Bonsai Support in a new tab', 'bonsai' ),
 		),
 	);
 	$wp_admin_bar->add_menu( $args );
@@ -78,7 +78,7 @@ add_action( 'wp_dashboard_setup', 'bonsai_add_support_widget', 10 );
 function bonsai_add_support_widget() {
 	wp_add_dashboard_widget(
 		'bonsai_support_widget',
-		esc_html__( 'The Bonsai Digital Collective Help Centre', 'bonsai' ),
+		esc_html__( 'Bonsai Support', 'bonsai' ),
 		'bonsai_render_support_widget'
 	);
 }
@@ -90,17 +90,17 @@ function bonsai_render_support_widget() {
 	);
 	$hc = apply_filters(
 		'bonsai_support_helpcentre_url',
-		'https://bonsaidigitalcollective.zendesk.com/hc/en-gb'
+		'https://support.bonsaidigitalcollective.co.uk/'
 	);
 	$req = apply_filters(
 		'bonsai_support_request_url',
-		'https://bonsaidigitalcollective.zendesk.com/hc/en-gb/requests/new'
+		'https://support.bonsaidigitalcollective.co.uk/'
 	);
 
 	// Output
 	echo '<div style="margin:-12px -12px 0 -12px;">';
 	if ( $banner ) {
-		echo '<img src="' . esc_url( $banner ) . '" alt="' . esc_attr__( 'Bonsai Digital Support', 'bonsai' ) . '" style="width:100%;height:auto;">';
+		echo '<img src="' . esc_url( $banner ) . '" alt="' . esc_attr__( 'Bonsai Support', 'bonsai' ) . '" style="width:100%;height:auto;">';
 	}
 	echo '</div>';
 
